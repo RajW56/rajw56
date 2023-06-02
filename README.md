@@ -1,7 +1,7 @@
 
 # Hi, I'm Rajesh! 👋
 
-Web developer|Btech in Civil) | Ex-Rodic Consultants Pvt Ltd
+Web developer| (Btech in Civil) | Ex-Rodic Consultants Pvt Ltd
 
 ## 🚀 About Me
 I'm a full stack web developer..
@@ -15,9 +15,10 @@ I'm a full stack web developer..
 
 
 ## 🛠 Skills
-1. Excel
-2. Power BI
-3. Power Apps
+1. Wordpress
+2. HTML , CSS. Javascript
+3. Power BI
+4. Power Apps
 
 
 ## Summary of my journey
@@ -25,7 +26,7 @@ I'm a full stack web developer..
 
 🧠 peaked the interest in Data visualization
 
-👯‍♀️ I'm looking to collaborate on data modeling and analysis projects..
+👯‍♀️ I'm looking to collaborate on web development projects..
 
 
 
