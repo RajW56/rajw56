@@ -1,10 +1,10 @@
 
 # Hi, I'm Rajesh! 👋
 
-Data enthusiast | IIT Roorkee (Btech in Civil) | Ex-Rodic Consultants Pvt Ltd
+Web developer|Btech in Civil) | Ex-Rodic Consultants Pvt Ltd
 
 ## 🚀 About Me
-I'm a full stack data enthusiast...
+I'm a full stack web developer..
 
 
 
