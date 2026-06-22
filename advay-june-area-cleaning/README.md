@@ -6,7 +6,8 @@ the English column is machine-translated and often garbled).
 
 ## Files
 - `clean_areas.py` – extraction script (fills the workbook in place).
-- `Advay_June_All_projects.xlsx` – cleaned output.
+- `build_master.py` – builds the Master Data sheet and backfills blanks that have a consistent internal match.
+- `Advay_June_All_projects.xlsx` – cleaned output (sheets: `Index II`, `Master Data`).
 
 ## Filled columns
 | Column | Meaning |
@@ -23,8 +24,23 @@ the English column is machine-translated and often garbled).
 - 99.8% of computed areas reconcile (±4 sq.ft) with the existing transacted-area columns.
 - 252 blanks are deeds that state no carpet area (only built-up or just parking) — each flagged in remarks.
 
+## Master Data sheet
+A catalog keyed on **Project + Tower + Flat Line** (the unit/stack from the flat
+number, e.g. Sky City `5606` & `5906` → line `06`), so a row with no area in its
+description can be looked up by its flat number.
+
+| Source | Meaning |
+|---|---|
+| `Extracted from descriptions` | area derived from deeds (with #transactions and area spread) |
+| `NEEDS EXTERNAL DATA` | no deed states an area for this line — fill from the external competition master |
+
+Lines still needing external data (223 Index II rows): **Skyline Icon**, **Lodha
+Altus A&B** (the few lines with no described flat), plus 1 Shraddha + 2 Winter Green.
+29 internally-matchable blanks were auto-backfilled (marked in `Area and Price Remarks`).
+
 ## Run
 ```
-python3 clean_areas.py
+python3 clean_areas.py     # 1. extract areas/towers into Index II
+python3 build_master.py    # 2. build Master Data sheet + backfill blanks
 ```
-Reads `SRC` (the original upload), writes the cleaned workbook to `OUT`.
+`clean_areas.py` reads `SRC` (the original upload) and writes `OUT`.
