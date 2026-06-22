@@ -25,7 +25,7 @@ RIVALI = {'मूनराईज': 'Moonrise', 'मुनराईस': 'Moonris
           'सनबर्स्ट': 'Sunburst', 'सनबस्ट': 'Sunburst', 'स्कायलीप': 'Skyleap'}
 
 # number + चौ + unit ; unit first char म => sq.m, फ => sq.ft (handles मी/मीटर/फुट/फूट/फ़ुट)
-NUMUNIT = r'(\d+(?:\.\d+)?)\s*चौ\.?\s*(म|फ)[ऀ-ॿ]*'
+NUMUNIT = r'(\d+(?:\.\d+)?)\s*चौ(?:रस)?\.?\s*(म|फ)[ऀ-ॿ]*'
 
 
 def _unit(c):
@@ -127,8 +127,8 @@ def extract(proj, mar, eng):
         # additional attached carpet (लगत/उपयोगिता/EBVT/utility/purchased area)
         parts = []
         for anc in (r'लगत', r'उपयोगिता', r'ई\.?\s*बी\.?\s*व्ही\.?\s*टी',
-                    r'युट[िी]लिटी', r'विकत\s*घेतलेले'):
-            a = _first_after(t, anc, 35)
+                    r'य[ुू]ट', r'विकत\s*घेतलेले'):
+            a = _first_after(t, anc, 50)
             if a:
                 parts.append(_to_sqm(*a))
         if parts:
