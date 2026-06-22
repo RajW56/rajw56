@@ -15,7 +15,7 @@ import re
 import openpyxl
 
 SRC = "/root/.claude/uploads/e76392c9-fd1b-51e2-8503-d2aabea764e9/19e351e4-Advay_June_All_projects.xlsx"
-OUT = "/home/user/rajw56/Advay_June_All_projects.xlsx"
+OUT = "/home/user/rajw56/advay-june-area-cleaning/Advay_June_All_projects.xlsx"
 SQM2SQFT = 10.764
 
 MLET = {'ए': 'A', 'बी': 'B', 'सी': 'C', 'डी': 'D', 'ई': 'E', 'एफ': 'F',
